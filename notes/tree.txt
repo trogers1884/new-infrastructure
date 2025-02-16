@@ -1,0 +1,153 @@
+app
+├── Components
+│   ├── Admin
+│   │   ├── Http
+│   │   │   ├── Controllers
+│   │   │   │   ├── GroupsController.php
+│   │   │   │   ├── GroupTypesController.php
+│   │   │   │   ├── PermissionsController.php
+│   │   │   │   ├── RolesController.php
+│   │   │   │   ├── StoresController.php
+│   │   │   │   └── UsersController.php
+│   │   │   └── Middleware
+│   │   ├── Providers
+│   │   │   └── AdminServiceProvider.php
+│   │   ├── resources
+│   │   │   └── views
+│   │   │       ├── groups
+│   │   │       │   ├── create.blade.php
+│   │   │       │   ├── edit.blade.php
+│   │   │       │   └── index.blade.php
+│   │   │       ├── group-types
+│   │   │       │   ├── create.blade.php
+│   │   │       │   ├── edit.blade.php
+│   │   │       │   └── index.blade.php
+│   │   │       ├── layouts
+│   │   │       │   └── admin.blade.php
+│   │   │       ├── permissions
+│   │   │       │   ├── create.blade.php
+│   │   │       │   ├── edit.blade.php
+│   │   │       │   └── index.blade.php
+│   │   │       ├── roles
+│   │   │       │   ├── create.blade.php
+│   │   │       │   ├── edit.blade.php
+│   │   │       │   ├── index.blade.php
+│   │   │       │   └── manage-permissions.blade.php
+│   │   │       ├── stores
+│   │   │       │   ├── create.blade.php
+│   │   │       │   ├── edit.blade.php
+│   │   │       │   ├── index.blade.php
+│   │   │       │   └── manage-groups.blade.php
+│   │   │       └── users
+│   │   │           ├── create.blade.php
+│   │   │           ├── edit.blade.php
+│   │   │           ├── index.blade.alt.php
+│   │   │           ├── index.blade.php
+│   │   │           └── manage-roles.blade.php
+│   │   └── routes
+│   │       └── web.php
+│   ├── Api
+│   │   ├── config
+│   │   │   └── api.php
+│   │   ├── Http
+│   │   │   ├── Controllers
+│   │   │   │   ├── BaseApiController.php
+│   │   │   │   └── v1
+│   │   │   │       ├── AuthController.php
+│   │   │   │       ├── Cafe
+│   │   │   │       │   └── MenuController.php
+│   │   │   │       ├── Loyalty
+│   │   │   │       │   └── LoyaltyController.php
+│   │   │   │       ├── Management
+│   │   │   │       │   └── ReportingController.php
+│   │   │   │       ├── Sbux
+│   │   │   │       │   └── SbuxController.php
+│   │   │   │       └── Trading
+│   │   │   │           └── DeskController.php
+│   │   │   └── Middleware
+│   │   │       └── ApiVersioning.php
+│   │   ├── Providers
+│   │   │   └── ApiServiceProvider.php
+│   │   └── routes
+│   │       ├── api.php
+│   │       └── v1
+│   │           ├── api.php
+│   │           ├── auth.php
+│   │           ├── cafe.php
+│   │           ├── loyalty.php
+│   │           ├── management.php
+│   │           ├── sbux.php
+│   │           └── trading.php
+│   └── DataExtraction
+│       ├── Contracts
+│       │   ├── DataSourceInterface.php
+│       │   └── ExtractorInterface.php
+│       ├── Events
+│       ├── Exceptions
+│       │   ├── ConnectionException.php
+│       │   └── ExtractionException.php
+│       ├── Jobs
+│       ├── Listeners
+│       ├── Providers
+│       │   └── DataExtractionServiceProvider.php
+│       └── Services
+│           ├── ConnectionManagers
+│           ├── Extractors
+│           │   ├── CsvDataSource.php
+│           │   └── CsvExtractor.php
+│           └── Validators
+├── Console
+│   └── Kernel.php
+├── Exceptions
+│   └── Handler.php
+├── Helpers
+│   └── Timer.php
+├── Http
+│   ├── Controllers
+│   │   ├── Auth
+│   │   │   ├── AuthenticatedSessionController.php
+│   │   │   ├── ConfirmablePasswordController.php
+│   │   │   ├── EmailVerificationNotificationController.php
+│   │   │   ├── EmailVerificationPromptController.php
+│   │   │   ├── NewPasswordController.php
+│   │   │   ├── PasswordController.php
+│   │   │   ├── PasswordResetLinkController.php
+│   │   │   ├── RegisteredUserController.php
+│   │   │   └── VerifyEmailController.php
+│   │   ├── Controller.php
+│   │   └── ProfileController.php
+│   ├── Kernel.php
+│   ├── Middleware
+│   │   ├── Authenticate.php
+│   │   ├── EncryptCookies.php
+│   │   ├── PreventRequestsDuringMaintenance.php
+│   │   ├── RedirectIfAuthenticated.php
+│   │   ├── TrimStrings.php
+│   │   ├── TrustHosts.php
+│   │   ├── TrustProxies.php
+│   │   ├── ValidateSignature.php
+│   │   └── VerifyCsrfToken.php
+│   └── Requests
+│       ├── Auth
+│       │   └── LoginRequest.php
+│       └── ProfileUpdateRequest.php
+├── Models
+│   ├── Group.php
+│   ├── GroupType.php
+│   ├── Permission.php
+│   ├── Role.php
+│   ├── Store.php
+│   ├── UserAccessRole.php
+│   └── User.php
+├── Providers
+│   ├── AppServiceProvider.php
+│   ├── AuthServiceProvider.php
+│   ├── BroadcastServiceProvider.php
+│   ├── EventServiceProvider.php
+│   └── RouteServiceProvider.php
+└── View
+    └── Components
+        ├── AppLayout.php
+        └── GuestLayout.php
+
+54 directories, 96 files
